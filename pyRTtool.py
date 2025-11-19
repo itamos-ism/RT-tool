@@ -392,7 +392,7 @@ class RT:
         """
         os.system('./RTtool')
     
-    def params(self, directory, prefix, vturb=1.0):
+    def params(self, directory, prefix, vturb=1.0, redshift=0):
         """
         Create a paramsRT.dat file with the specified parameters.
         
@@ -406,6 +406,7 @@ class RT:
                 f.write(f"{directory}\n")
                 f.write(f"{prefix}\n")
                 f.write(f"{vturb}\n")
+                f.write(f"{redshift}\n")
             
             print("Successfully created paramsRT.dat")
             return True
